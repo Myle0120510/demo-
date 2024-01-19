@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <p>Enter two numbers:</p>
+  <input type="text" id="num1" placeholder="Number 1" onkeyup="myFunction()">
+  <input type="text" id="num2" placeholder="Number 2" onkeyup="myFunction()">
+  <p>
+    My name is: <span id="demo"></span>
+  </p>
+
+  <script>
+    function myFunction() {
+      // Get the value of the input fields
+      var num1 = parseInt(document.getElementById("num1").value);
+      var num2 = parseInt(document.getElementById("num2").value);
+
+      // Calculate the sum
+      var sum = num1 + num2;
+
+      // Update the content of the `span` element
+      document.getElementById("demo").textContent = sum;
+    }
+  </script>
+</body>
+</html>

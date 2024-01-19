@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <p>Enter something</p>
+    Enter ur name: <input type="text" id="fname" >
+    Enter ur name: <input type="text" id="fusername">
+
+    <button onclick="cong()">OK</button>
+
+    <p>My name is: <span id="demo"></span></p>
+
+
+    <script>
+        function cong()
+        {
+            var x = parseInt(document.getElementById("fname").value);
+            var y =  parseInt(document.getElementById("fusername").value);
+            document.getElementById("demo").innerHTML = x + y ;
+        }
+    </script>
+
+</body>
+</html>

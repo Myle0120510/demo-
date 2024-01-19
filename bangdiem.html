@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form class="wap">
+        <h3>Bang diem cua em</h3>
+        Semester 1
+        <input type="text" id="s1"> <br>
+        Semester 2
+        <input type="text" id="s2"> <br>
+        Year
+        <select id="year">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select> <br>
+         Summarise
+         <input type="text" id="tb" value="" > <br>
+         <input type="button" onclick="functionOK()" value="OK">
+         <input type="button" onclick="functionCancel()" value="Cancel"> <br>
+</form>
+</body>
+</html>
+    <script>
+        function functionOK() {
+            var s1 = parseInt(document.getElementById("semester1").value);
+            var s2 = parseInt(document.getElementById("semester2").value);
+            var y = document.getElementById("years");
+            var value = y[y.selectedIndex].value;
+        }
+        switch(y)
+    {
+        case 1:
+        {
+            tb = (s1 + s2)/2;
+            document.getElementById("tb").value = tb;
+        }
+        case 2:
+        {
+           tb = (s1 + s2*2)/3;
+           document.getElementById("tb").value = tb;
+        }
+        case 3:
+        {
+          tb = (s1 + s2*3)/4;
+          document.getElementById("tb").value = tb;
+        }
+        case 4:
+        {
+            tb = (s1 + s2*4)/5;
+            document.getElementById("tb").value = tb;
+        }
+    }
+    switch(tb)
+    {
+        case 9:
+        {
+            document.getElementById("kq").inner.HTML ="SX";
+            document.getElementById("kq").style.color="yellow";
+        }
+        case 8:
+        {
+            document.getElementById("kq").inner.HTML="Gioi";
+            document.getElementById("kq").style.color="Ded";
+        }
+        case 7:
+        {
+            document.getElementById("kq").inner.HTML="Kha";
+            document.getElementById("kq").style.color="blue";
+        }
+    }
+
+        function myFunction2() {
+            document.getElementById("semester1").value = "";
+            document.getElementById("semester2").value = "";
+            document.getElementById("sum").value = "";
+        }
+    </script>
+</body>
+
+</html>
